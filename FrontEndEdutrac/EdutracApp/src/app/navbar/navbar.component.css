@@ -1,0 +1,128 @@
+/* Your CSS styling for the navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #DEC0F1;
+  color: black;
+  padding: 10px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.unique-heading {
+  font-size: 18px; /* Adjust the font size as needed */
+  font-weight: bold;
+  font-family: cursive; /* Use a cursive font family */
+  color: #404e7b; /* Set a unique color for the heading */
+  margin-right: 20px; /* Add spacing between the heading and the Student Login button */
+  transition: color 0.3s ease; /* Smooth transition for text color */
+  cursor: pointer; /* Add a pointer cursor on hover */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: dotted; /* Add font-weight for bold text */
+}
+.edu {
+ color:#5b5361 /* Color for "Edu" */
+}
+
+.trac {
+  color:#7161EF /* Color for "Trac" */
+}; /* Color for "Edu" */
+
+
+.trac {
+  color: #495256; /* Color for "Trac" */
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+ 
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color:black;
+  font-weight: bold; /* Add font-weight for bold text */
+}
+
+/* Button style for .menu button */
+.menu button {
+  height: 32px;
+  border-radius: 5px;
+  border: 0;
+  background-color: #e8ddd4;
+  margin-left: 10px;
+  width: 60px;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  cursor: pointer; /* Add a pointer cursor on hover */
+}
+
+/* Hover effect for .menu button */
+.menu button:hover {
+  background-color: #5b5361; /* Change to a unique background color on hover (e.g., reddish-orange) */
+  color: #fff; /* Text color on hover */
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 3px 0;
+}
+
+/* Style for the hamburger menu content */
+.menu.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #333;
+  border-radius: 5px; /* Add border-radius for rounded corners */
+  padding: 10px; /* Add padding to the content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.menu.active ul {
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.menu.active a {
+  color: #fff;
+  margin: 8px 0; /* Add spacing between items */
+  font-size: 18px; /* Adjust font size as needed */
+  text-transform: uppercase; /* Convert text to uppercase */
+  text-align: right; /* Align text to the right */
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+}

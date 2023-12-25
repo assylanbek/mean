@@ -1,0 +1,84 @@
+.footer {
+    background-color: #222c31;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .head,
+  .body,
+  .social,
+  .subscribe {
+    flex: 1;
+    margin: 0 10px;
+  }
+  
+  .head h2,
+  .body h1,
+  .social h3,
+  .subscribe h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .body h1 {
+    font-size: 24px;
+    color: #7161EF;
+    margin-right: 0;
+  }
+  
+  .head h2,
+  .body h2,
+  .social ul li,
+  .subscribe input[type="email"] {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .social ul,
+  .subscribe form {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .social ul li,
+  .subscribe form {
+    margin-bottom: 5px;
+  }
+  
+  .social ul li a {
+    color:#7161EF;
+    text-decoration: none;
+  }
+  
+  .subscribe input[type="email"] {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  .subscribe button {
+    background-color: #7161EF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  .subscribe button:hover {
+    background-color: #7161EF
+  }
+  .edu {
+    color:#5b5361 /* Color for "Edu" */
+   }
+   
+   .trac {
+     color:#7161EF /* Color for "Trac" */
+   }

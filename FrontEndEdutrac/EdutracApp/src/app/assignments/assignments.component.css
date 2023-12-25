@@ -1,0 +1,105 @@
+
+
+.container{
+    /* border: 1px solid red; */
+    height: auto;
+    width: 95vw;
+    margin: auto;
+}
+
+h2{
+    color:#20190e 
+    }
+    p{
+        color:#49796b ;
+    }
+    
+.heading{
+    border: 1px solid rgb(206, 204, 204);
+    height: 10vh;
+    width: 90vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: small;
+    padding-left: 62px;
+    border-left: 0px;
+    border-right: 0px;
+   
+}
+
+.body{
+    /* border: 1px solid green; */
+    height: 80vh;
+    width: 70vw;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin: auto;
+    
+    
+}
+
+.body .title{
+    border: 1px solid rgb(231, 229, 227);
+    height: auto;
+    width: 68vw;
+    padding-left: 23px;
+    border-radius: 1px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px; */
+    margin-bottom: 15px;
+    border-left: 8px solid #010b13;
+}
+
+.title>p{
+   
+    font-size: smaller;
+}
+.form>label{
+   font-weight: 600;
+   font-size: x-large;
+}
+.form>input{
+    height: 6vh;
+    width: 50vw;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.form>button{
+    height: 6vh;
+    width: 10vw;
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: rgb(56, 56, 254);
+    font-weight: 600;
+    color: white;
+}
+
+
+@media (max-width:1200px){
+    .container{
+        height: auto;
+        width: auto;
+    }
+    .heading{
+        height: auto;
+        width: auto;
+    }
+    .body{
+        height: auto;
+        width: auto;
+    }
+
+    .body .title{
+        height: auto;
+        width: auto;
+    }
+
+    .form>input{
+        /* height: auto; */
+        width: auto;
+    }
+    .form>button{
+        height: auto;
+        width: auto;
+    }
+}

@@ -1,0 +1,14 @@
+
+<div class="container">
+        <div class="heading"> Our Courses</div>
+
+        <div class="course-card">
+            <div class="card" *ngFor="let course of courses">
+                <h2>{{ course.courseName }}</h2>
+                <h3>{{ course.department }}</h3>
+                <h4>{{ course.instructor }}</h4>
+                <p>{{ course.description }}</p>
+              </div>
+             
+        </div>
+</div>

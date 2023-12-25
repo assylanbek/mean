@@ -1,0 +1,19 @@
+<nav class="navbar">
+  <a [routerLink]="['/']" class="logo">
+    <span class="edu">Edu</span>
+    <span class="trac">Trac</span>
+  </a>
+  <div class="unique-heading">Unlock Learning Adventures</div>
+  <div class="hamburger-menu" (click)="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <div class="menu" [ngClass]="{'active': isMenuOpen}">
+    <ul>
+      <!-- Conditional rendering of the login/logout button -->
+      <button *ngIf="!isStudentLoggedIn"><a [routerLink]="['/login/student']">Login</a></button>
+      <button *ngIf="isStudentLoggedIn" (click)="logout()">Logout</button>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,65 @@
+.container{
+    /* border: 1px solid red; */
+    height: auto;
+    width: 80vw;
+    margin: auto;
+}
+
+.heading{
+    border: 1px solid rgb(206, 204, 204);
+    height: 6vh;
+    width: 80vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+    border-left: 0px;
+    border-right: 0px;
+    margin-top: 10px;
+    padding: 10px;
+    
+}
+h2{
+color:#567ed3 ;
+}
+h3{
+    color:#49796b ;
+}
+h4{
+    color:#20190e ;
+}
+
+.course-card{
+    /* border: 1px solid green; */
+    height: auto;
+    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    place-items: center;
+    gap: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.course-card .card{
+    border-left: 10px solid #b9871c;
+    /* background-color: rgb(231, 228, 228); */
+    height: auto;
+    width: 25vw;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media (max-width: 1200px){
+    .course-card{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);   
+        height: auto;
+        width: auto;
+ }
+
+ .course-card .card{
+    height: auto;
+    width: auto;
+ }
+}

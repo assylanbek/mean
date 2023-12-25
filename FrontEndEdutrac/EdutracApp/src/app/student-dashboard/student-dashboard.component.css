@@ -1,0 +1,21 @@
+/* Normal state for navigation links */
+/* Normal state for navigation links */
+.student-dashboard-menu a {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px;
+    text-decoration: none;
+    font-size: large;
+   /* Transparent text color */
+    background-color: transparent; /* Fully transparent background */
+    border-radius: 10px;
+    color:#4f7942;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+  
+  /* Hover state for navigation links */
+  .student-dashboard-menu a:hover {
+    background-color: rgba(255, 0, 0, 0.7); /* Semi-transparent red background on hover */
+    color: #fff; /* Text color on hover */
+  }
+  

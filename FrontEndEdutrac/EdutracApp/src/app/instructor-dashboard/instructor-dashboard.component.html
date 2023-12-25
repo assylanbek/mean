@@ -1,0 +1,193 @@
+<div class="container mt-4">
+    <h1>Welcome to Instructor Dashboard</h1>
+  
+    <!-- Navigation buttons -->
+    <div class="btn-group" role="group" aria-label="Dashboard Navigation">
+      <button type="button" class="btn btn-primary" (click)="showCreateAssignment()">Create Assignment</button>
+      <button type="button" class="btn btn-primary" (click)="showCreateCourse()">Create Course</button>
+      <button type="button" class="btn btn-primary" (click)="showCreateAnnouncement()">Create Announcement</button>
+    
+    </div>
+  
+    <!-- Display content based on selected option -->
+    <div class="mt-4">
+      <!-- Content for Create Assignment -->
+      <div *ngIf="showAssignment" class="dashboard-section">
+        <h2>Create Assignment 1</h2>
+        <form (submit)="createAssignment()">
+          <div class="form-group">
+            <label for="assignmentName">Assignment Name:</label>
+            <input type="text" id="assignmentName" [(ngModel)]="assignmentTitle" name="assignmentTitle" required>
+          </div>
+          <div class="form-group">
+            <label for="assignmentName">Course:</label>
+            <input type="text" id="assignmentName" [(ngModel)]="assignmentCourse" name="assignmentCourse" required>
+          </div>
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea id="description" [(ngModel)]="assignmentDescription" name="description" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="dueDate">Due Date:</label>
+            <input type="date" id="dueDate" [(ngModel)]="assignmentDueDate" name="dueDate" required>
+          </div>
+          <!-- Other fields for the assignment form -->
+          <button type="submit" class="btn btn-success">Create</button>
+        </form>
+      </div>
+  
+      <!-- Content for Create Course -->
+      <div *ngIf="showCourse" class="dashboard-section">
+        <h2>Create Course</h2>
+        <form (submit)="createCourse()">
+          <div class="form-group">
+            <label for="courseCode">Course Code:</label>
+            <input type="text" id="courseCode" [(ngModel)]="courseCode" name="courseCode" required>
+          </div>
+          <div class="form-group">
+            <label for="courseName">Course Name:</label>
+            <input type="text" id="courseName" [(ngModel)]="courseName" name="courseName" required>
+          </div>
+          <div class="form-group">
+            <label for="department">Department:</label>
+            <select id="department" [(ngModel)]="department" name="department" required>
+              <option value="Science">Science</option>
+              <option value="Arts">Arts</option>
+              <option value="Engineering">Engineering</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="credits">Credits:</label>
+            <input type="number" id="credits" [(ngModel)]="credits" name="credits">
+          </div>
+          <div class="form-group">
+            <label for="courseDescription">Course Description:</label>
+            <textarea id="courseDescription" [(ngModel)]="description" name="description" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="instructor">Instructor:</label>
+            <input type="text" id="instructor" [(ngModel)]="instructor" name="instructor" required>
+          </div>
+          <!-- Other fields for the course form -->
+          <button type="submit" class="btn btn-success">Create</button>
+        </form>
+      </div>
+
+      <!-- Content for Create Announcement -->
+      <div *ngIf="showAnnouncement" class="dashboard-section">
+        <h2>Create Announcement</h2>
+        <form (submit)="createAnnouncement()">
+          <div class="form-group">
+            <label for="announcementTitle">Announcement Title:</label>
+            <input type="text" id="announcementTitle" [(ngModel)]="announcementTitle" name="announcementTitle" required>
+          </div>
+          <div class="form-group">
+            <label for="announcementContent">Announcement Content:</label>
+            <textarea id="announcementContent" [(ngModel)]="announcementDescription" name="announcementDescreption" required></textarea>
+          </div>
+            <div class="form-group">
+      <label for="announcementDate">Announcement Date:</label>
+      <input type="date" id="announcementDate" [(ngModel)]="announcementDate" name="announcementDate" required>
+    </div>
+          <!-- Other fields for the announcement form -->
+          <button type="submit" class="btn btn-success">Create</button>
+        </form>
+      </div>
+
+   <!-- Content for Courses -->
+   <ng-container *ngIf="showCourse">
+    <div *ngIf="courses && courses.length > 0" class="dashboard-section">
+      <h2>Courses</h2>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Course Code</th>
+            <th>Course Name</th>
+            <th>Department</th>
+            <th>Credits</th>
+            <th>Description</th>
+            <th>Instructor</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let course of courses">
+            <td>{{ course.courseCode }}</td>
+            <td>{{ course.courseName }}</td>
+            <td>{{ course.department }}</td>
+            <td>{{ course.credits }}</td>
+            <td>{{ course.description }}</td>
+            <td>{{ course.instructor }}</td>
+            <td>
+              <button class="btn btn-olive" (click)="editCourse(course)">Edit</button>
+          <button class="btn btn-danger" (click)="deleteCourse(course._id)">Delete</button>
+      
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </ng-container>
+
+
+
+          <ng-container *ngIf="showAssignment">
+            <div *ngIf="assignments && assignments.length > 0" class="dashboard-section">
+              <h2>Assignments</h2>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Assignment Name</th>
+                    <th>Description</th>
+                    <th>Due Date</th>
+                  
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let assignment of assignments">
+                    <td>{{ assignment.assignmentTitle }}</td>
+                    <td>{{ assignment.assignmentDescription }}</td>
+                    <td>{{ assignment.assignmentDueDate}}</td>
+                    <td>{{ assignment.assignmentCourse }}</td>
+                    <td>
+                      <!-- <button class="btn btn-olive" (click)="editAssignment(assignment)">Edit</button> -->
+                      <button class="btn-olive " (click)="deleteAssignment(assignment._id)">Delete</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </ng-container>
+          <!-- Content for Announcements -->
+    <ng-container *ngIf="showAnnouncement">
+        <div *ngIf="announcements && announcements.length > 0" class="dashboard-section">
+        <h2>Announcements</h2>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Announcement Title</th>
+              <th>Announcement Description</th>
+              <th>Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let announcement of announcements">
+              <td>{{ announcement.announcementTitle }}</td>
+              <td>{{ announcement.announcementDescription }}</td>
+              <td>{{ announcement.announcementDate }}</td>
+              <td>
+                <button class="btn-olive " (click)="deleteAnnouncement(announcement._id)">Delete</button>
+                <!-- Add edit and delete buttons for announcements here -->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+      </ng-container>
+      
+    
+    
+        </div>
+      </div>

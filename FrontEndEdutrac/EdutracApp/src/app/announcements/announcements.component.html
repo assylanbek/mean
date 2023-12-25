@@ -1,0 +1,22 @@
+
+
+<div class="container">
+    <div class="heading">
+        <h2>Announcements</h2>
+    </div>
+
+    <div class="body">
+        <div class="announce-card" *ngFor="let announcement of announcements" (click)="toggleAnnouncementDetails(announcement)">
+            <div class="color"></div>
+            <div class="announce">
+                <h3>{{ announcement.announcementTitle }}</h3>
+                <span>{{ announcement.announcementDescription }}</span>
+                <div *ngIf="selectedAnnouncement === announcement" class="description">
+                    <p>{{ announcement.announcementDate }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

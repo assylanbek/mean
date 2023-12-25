@@ -1,0 +1,27 @@
+
+
+<div class="container">
+    <div class="heading"><h2>Assignments</h2></div>
+    <div class="body">
+        <div class="title" *ngFor="let assignment of assignments">
+            <h2 (click)="toggleAssignmentDetails(assignment)">{{ assignment.assignmentTitle }}</h2>
+            <p>{{ assignment.assignmentDueDate}}</p>
+            <div *ngIf="selectedAssignment === assignment">
+                <p>{{ selectedAssignment.assignmentDescription}}</p>
+                <div class="form">
+                    <label>Link : </label>
+                    <input type="text" placeholder="Enter assignment link">
+                    <button>Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+  
+  
+  
+  
